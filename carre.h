@@ -1,4 +1,3 @@
-#pragma once
 #ifndef CCARRE_H
 #define CCARRE_H
 
@@ -11,21 +10,28 @@ private:
     int cote; // Longueur du côté du carré
 
 public:
+    // Constructeurs
+    CCarre(); // Constructeur par défaut
+    CCarre(int sx1, int sy1, int cote1); // Constructeur paramétré
+
     // Méthodes pour modifier les valeurs des attributs
-    void Setsx(int sx1); // Affecte la valeur de sx
-    void Setsy(int sy1); // Affecte la valeur de sy
-    void Setcote(int cote1); // Affecte la valeur de cote
+    void Setsx(int sx1);
+    void Setsy(int sy1);
+    void Setcote(int cote1);
 
     // Méthode pour afficher les caractéristiques du carré
     void Afficher();
 
     // Méthodes pour récupérer les valeurs des attributs
-    int Getsx(); // Retourne la valeur de sx
-    int Getsy(); // Retourne la valeur de sy
-    int GetCote(); // Retourne la valeur de cote
+    int Getsx();
+    int Getsy();
+    int GetCote();
 
-    // Méthode pour déplacer le carré
+    // Méthode pour déplacer le carré avec une direction et un saut
     void Deplacer(char direction, int saut);
+
+    // Surcharge : déplacer le carré avec un vecteur dx, dy
+    void Deplacer(int dx, int dy);
 };
 
-#endif // CCARRE_H
+#endif
