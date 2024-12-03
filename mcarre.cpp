@@ -4,7 +4,6 @@
 using namespace std;
 
 int main() {
-    locale::global(locale("fr-fr"));
     CCarre carre;
 
     // Initialisation des attributs avec les setters
