@@ -1,5 +1,9 @@
-#ifndef CCARRE_H
-#define CCARRE_H
+/// @file carre.h
+/// @brief Modifier ou Afficher les valeurs d'un carré définis
+/// @details On peut définir les cotés du carré, les afficher ou encore les déplacer
+/// @author Trompier Téo
+/// @version 0.1 - Visual Studio 2019
+/// @date 29/12/2024
 
 #include <iostream>
 
@@ -33,5 +37,3 @@ public:
     // Surcharge : déplacer le carré avec un vecteur dx, dy
     void Deplacer(int dx, int dy);
 };
-
-#endif

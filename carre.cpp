@@ -1,7 +1,6 @@
-#ifndef CCARRE_H
-#define CCARRE_H
-
 #include <iostream>
+
+using namespace std;
 
 class CCarre {
 private:
@@ -33,10 +32,6 @@ public:
     // Surcharge : déplacer le carré avec un vecteur dx, dy
     void Deplacer(int dx, int dy);
 };
-
-#endif
-
-using namespace std;
 
 // Constructeur par défaut
 CCarre::CCarre() : sx(0), sy(0), cote(0) {}
