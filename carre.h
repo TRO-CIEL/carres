@@ -7,33 +7,63 @@
 
 #include <iostream>
 
+/// @class CCarre
+/// @brief Classe représentant un carré avec des coordonnées et une longueur de côté.
 class CCarre {
 private:
-    int sx;  // Coordonnée x du sommet supérieur gauche
-    int sy;  // Coordonnée y du sommet supérieur gauche
-    int cote; // Longueur du côté du carré
+    /// @brief Coordonnée x du sommet supérieur gauche.
+    int sx;
+
+    /// @brief Coordonnée y du sommet supérieur gauche.
+    int sy;
+
+    /// @brief Longueur du côté du carré.
+    int cote;
 
 public:
-    // Constructeurs
-    CCarre(); // Constructeur par défaut
-    CCarre(int sx1, int sy1, int cote1); // Constructeur paramétré
+    /// @brief Constructeur par défaut.
+    CCarre();
 
-    // Méthodes pour modifier les valeurs des attributs
+    /// @brief Constructeur paramétré.
+    /// @param[in] sx1 Coordonnée x du sommet supérieur gauche.
+    /// @param[in] sy1 Coordonnée y du sommet supérieur gauche.
+    /// @param[in] cote1 Longueur du côté du carré.
+    CCarre(int sx1, int sy1, int cote1);
+
+    /// @brief Définit la coordonnée x du sommet supérieur gauche.
+    /// @param[in] sx1 Nouvelle valeur de la coordonnée x.
     void Setsx(int sx1);
+
+    /// @brief Définit la coordonnée y du sommet supérieur gauche.
+    /// @param[in] sy1 Nouvelle valeur de la coordonnée y.
     void Setsy(int sy1);
+
+    /// @brief Définit la longueur du côté du carré.
+    /// @param[in] cote1 Nouvelle longueur du côté.
     void Setcote(int cote1);
 
-    // Méthode pour afficher les caractéristiques du carré
+    /// @brief Affiche les caractéristiques du carré.
     void Afficher();
 
-    // Méthodes pour récupérer les valeurs des attributs
+    /// @brief Récupère la coordonnée x du sommet supérieur gauche.
+    /// @param[out] Retourne la coordonnée x actuelle.
     int Getsx();
+
+    /// @brief Récupère la coordonnée y du sommet supérieur gauche.
+    /// @param[out] Retourne la coordonnée y actuelle.
     int Getsy();
+
+    /// @brief Récupère la longueur du côté du carré.
+    /// @param[out] Retourne la longueur actuelle du côté.
     int GetCote();
 
-    // Méthode pour déplacer le carré avec une direction et un saut
+    /// @brief Déplace le carré dans une direction donnée avec un saut.
+    /// @param[in] direction Direction du déplacement ('N', 'S', 'E', 'O').
+    /// @param[in] saut Distance du déplacement.
     void Deplacer(char direction, int saut);
 
-    // Surcharge : déplacer le carré avec un vecteur dx, dy
+    /// @brief Déplace le carré en utilisant un vecteur.
+    /// @param[in] dx Déplacement sur l'axe x.
+    /// @param[in] dy Déplacement sur l'axe y.
     void Deplacer(int dx, int dy);
 };
